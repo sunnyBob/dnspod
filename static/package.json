@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "gulp-htmltojs": "^1.1.0"
+  }
+}

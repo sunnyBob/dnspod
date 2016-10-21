@@ -1,0 +1,1 @@
+define(function(require){ return '{{#.}}<tr class=\"tr\"><td>{{name}}</td><td>{{type}}</td><td>{{line}}</td><td>{{value}}</td><td>{{mx}}</td><td>{{ttl}}</td><td><a href=\"#\" id=\"del_\" name={{id}}>删除</a><a href=\"#\" id=\"Mdify_\" name={{id}}>修改</a></td></tr>{{/.}}'})

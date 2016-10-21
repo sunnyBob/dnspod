@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>listDemo</title>
+	<script src="http://cdn.bootcss.com/require.js/2.2.0/require.js" data-main="./js/config.js"></script>
+	<link href="style/css/style.css" rel="stylesheet"  type="text/css" >
+	<link rel="stylesheet" type="text/css" href="lib/Semantic/semantic.min.css">
+	<link rel="stylesheet" href="lib/jquery-ui/jquery-ui.min.css">
+</head>
+<body>
+	<div class="ui bottom attached segment pushable">
+		<div class="ui bottom attached segment pushable " >
+  		<div class="ui inverted labeled icon left inline vertical sidebar menu uncover visible">
+  			<img class="item" src="style/img/logo.png">
+  			<a class="item"><i class="home icon"></i> 总览页 </a>
+		    <a class="item active" name="list"><i class="tasks icon"></i>域名列表 </a>
+		    <a class="item" name="analyze"><i class="bug icon"></i>域名解析</a>
+		    <a class="item"><i class="smile icon"></i> Friends </a>
+		    <a class="item"><i class="calendar icon"></i> History </a>
+ 		</div>
+		<div class="pusher">
+			<div class="ui positive message testTip">
+			  <div class="header"></div>
+			</div>
+		    <div class="ui basic segment">
+		        <h3 class="ui header">hello Mr</h3>
+		    </div>
+		    <div id = "domainPage">
+		    	<div class="ui icon input">
+		    	  <input placeholder="Search..." class="domainSearch" type="text">
+		    	  <i class="inverted circular search link icon"></i>
+		    	</div>
+		    	<h2 class="ui header">
+			 	<i class="settings icon"></i>
+			  	<div class="content domainlist">域名列表</div>
+			</h2>
+			<div  class="ui action input">
+			  <input name="add" placeholder="请输入域名..." type="text">
+			  <button id="addbtn" class="ui inverted purple button" data-tooltip="确认添加" data-position="top left">添加</button>
+			</div>
+		    	<table id="domainTable">
+		    	 	<thead>
+		    	 		<tr>
+			    	 		<th>域名</th>
+			    	 		<th>套餐</th>
+			    	 		<th>创建时间</th>
+			    	 		<th>修改时间</th> 							
+			    	 		<th>操作</th>
+		    	 		</tr>
+		    	 	</thead>
+		    	 	<tbody id="myBody"></tbody>
+		    	</table>
+		    	<div class="display pageContainer">
+		    		<button class="first ui blue button left">首页</button>
+			    	<button class="display ui blue button left" name = "lastPage" ><-上一页</button>
+			    	<div class = "domainPage left">
+			    		<button class = "ui button"><span class = 'children'></span>/<span class="parent"></span></button>
+			    	</div>
+			    	<button  class="display ui blue button left" name = "nextPage" >下一页-></button>
+			    	<button class="last ui blue button left">尾页</button>
+			    	<input type="text" class="jump left"><span></span><button class="domainJumpBtn ui blue button left">跳转</button>
+			</div>
+		</div>
+	    	<div id="recordPage" class="display">
+		    	<div class="ui icon input recordInput">
+		    	    <input placeholder="Search..." class="recordSearch" type="text">
+		    	    <i class="inverted circular search link icon record"></i>
+		    	</div>
+		    	<h2 class="ui header ">
+				  	<div class="content left allDomain">
+				  		<img src="style/img/p1.png" class="left"></img>全部域名
+				  	</div>
+				  	<span class = "recordTip left"></span>
+				  	<span class="name left">记录管理</span>
+			</h2>
+			<div  class="ui action input">
+				  <input name="analyze" placeholder="请输入解析域名..." type="text">
+				  <button id="alybtn" class="ui inverted purple button" data-tooltip="确认解析" data-position="bottom left">解析</button>
+			</div>		
+			<p>
+				<button class="positive ui button" name="AMRec">添加记录</button>
+			</p>
+			<div class="form display">
+				<p class="ui action input" >
+					<select name="recType" class ='input'>
+					</select>
+					<select name="lineType" class ='input'>
+					</select>
+					<input name="value" placeholder="记录值" type="text" class ='input'>
+					<input name="MX" placeholder="MX优先级" type="text" disabled class ='input'>
+					<input name="ttl" placeholder="ttl" class ='input' type="text">
+					<button class="positive ui button " name="ARec">确认添加</button>
+				</p>
+			</div>	
+			<table  id="recordTable">
+				<thead>
+					<th>主机记录</th>
+					<th>记录类型</th>
+					<th>线路类型</th>
+					<th>纪录值</th>
+					<th>MX优先级</th>
+					<th>TTL</th>
+					<th>操作</th>
+				</thead>
+				<tbody class="recBody"></tbody>
+			</table>
+			<div class="display pageContainer">
+		    		<button class="first ui blue button left">首页</button>
+			    	<button class="display ui blue button left" name = "lastPage" ><-上一页</button>
+			    	<div class = "recordPage left">
+		    			<button class = "ui button"><span class = 'children'></span>/<span class="parent"></span></button>
+		    		</div>
+			    	<button  class="display ui blue button left" name = "nextPage" >下一页-></button>
+			    	<button class="last ui blue button left">尾页</button>
+			    	<input type="text" class="jump left"><span></span><button class="recordJumpBtn ui blue button left">跳转</button>
+			</div>
+		</div>
+	</div>
+	<div id="dialog-confirm" title="Empty the recycle bin?">
+	  	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>The item will be permanently deleted and cannot be recovered. Are you sure?</p>
+	</div>
+	 
+</body>
+</html>
